@@ -6,7 +6,7 @@ Improves menu accessibility in two ways:
  * Adds a delay to submenus disappearing when moving the mouse away.
  * Makes submenus appear when tabbing through menu items with the keyboard.
 
-Kudos to Rian Rietveld for the original code concept on which this plugin is based. Originally written for a Genesis Framework child theme, this should work for all WordPress themes and static sites which follow a typical structure for menus and submenus.
+Kudos to Rian Rietveld for the original code concept on which this plugin is based. Originally written for [Genesis Framework](http://genesis-theme-framework.com) child themes, this should work for all WordPress themes and static sites which follow a typical structure for menus and submenus.
 
 ## Download
 
@@ -90,6 +90,40 @@ jQuery( document ).gamajoAccessibleMenu({
     hoverDelay: 250,
     menuItemSelector: '.menu-item'
 });
+~~~
+
+### CSS
+
+All this plugin does is add and remove the classes. You will still need to add CSS for the `.menu-item-hover` selector to make submenus appear when that selector is present.
+
+In Genesis Framework child themes, you might have something like:
+
+~~~css
+.menu-item:hover {
+    position: static;
+}
+
+.menu-item:hover > .sub-menu {
+    left: auto;
+    opacity: 1;
+}
+~~~
+
+That can be updated to:
+
+~~~css
+.menu-item:hover,
+.menu-item-hover,
+.menu-item:focus {
+    position: static;
+}
+
+.menu-item:hover > .sub-menu,
+.menu-item-hover > .sub-menu,
+.menu-item:focus > .sub-menu {
+    left: auto;
+    opacity: 1;
+}
 ~~~
 
 ## Options
