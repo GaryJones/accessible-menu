@@ -21,8 +21,8 @@ Change `#master` to `#develop` or a specific tag like `#1.0.0` if needed.
 ### Zip
 Download the [production version][min] or the [development version][max].
 
-[min]: https://raw.github.com/gary/accessible-menu/master/dist/accessible-menu.min.js
-[max]: https://raw.github.com/gary/accessible-menu/develop/dist/accessible-menu.js
+[min]: https://raw.githubusercontent.com/GaryJones/accessible-menu/master/dist/jquery.accessible-menu.min.js
+[max]: https://raw.githubusercontent.com/GaryJones/accessible-menu/master/dist/jquery.accessible-menu.js
 
 ### WordPress Theme
 If using WordPress, and not concatenating it into your main theme JavaScript file, add the following to your theme functions.php:
@@ -41,6 +41,8 @@ function prefix_enqueue_scripts() {
     wp_enqueue_script( 'gamajo-accessible-menu', $js_dir . "jquery.accessible-menu{$suffix}.js", array( 'jquery' ), '1.0.0', true );
 }
 ~~~
+
+That assumes the minified and non-minified scripts will end up in `wp-content/yourtheme/js/`.
 
 Now in your main theme JavaScript file, add one of the Example lines from below.
 
