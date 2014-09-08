@@ -1,6 +1,21 @@
 {
-  "name": "jquery-plugin",
-  "version": "0.0.0-ignored",
+  "name": "accessible-menu",
+  "version": "1.0.0",
+  "author" "Gary Jones, Gamajo Tech"
+  "homepage": "https://github.com/GaryJones/accessible-menu",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/GaryJones/accessible-menu.git"
+  },
+  "bugs": {
+    "url": "https://github.com/GaryJones/accessible-menu/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://gamajo.mit-license.org/2014"
+    }
+  ],
   "engines": {
     "node": ">= 0.8.0"
   },
@@ -8,12 +23,12 @@
     "test": "grunt qunit"
   },
   "devDependencies": {
+    "grunt": "~0.4.5",
     "grunt-contrib-jshint": "~0.10.0",
-    "grunt-contrib-qunit": "~0.2.0",
-    "grunt-contrib-concat": "~0.3.0",
-    "grunt-contrib-uglify": "~0.2.0",
-    "grunt-contrib-watch": "~0.4.0",
-    "grunt-contrib-clean": "~0.4.0",
-    "grunt": "~0.4.5"
+    "grunt-contrib-qunit": "~0.5.2",
+    "grunt-contrib-concat": "~0.5.0",
+    "grunt-contrib-uglify": "~0.5.1",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-contrib-clean": "~0.6.0"
   }
 }
