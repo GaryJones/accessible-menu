@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Gamajo Accessible Menu Test Suite</title>
+  <!-- Load local jQuery. This can be overridden with a ?jquery=___ param. -->
+  <script src="../libs/jquery-loader.js"></script>
+  <!-- Load local QUnit. -->
+  <link rel="stylesheet" href="../libs/qunit/qunit.css" media="screen">
+  <script src="../libs/qunit/qunit.js"></script>
+  <!-- Load local lib and tests. -->
+  <script src="../src/jquery.accessible-menu.js"></script>
+  <script src="accessible-menu_test.js"></script>
+  <!-- Removing access to jQuery and $. But it'll still be available as _$, if
+       you REALLY want to mess around with jQuery in the console. REMEMBER WE
+       ARE TESTING A PLUGIN HERE, THIS HELPS ENSURE BEST PRACTICES. REALLY. -->
+  <script>window._$ = jQuery.noConflict(true);</script>
+</head>
+<body>
+  <div id="qunit"></div>
+  <div id="qunit-fixture">
+    <nav id="menu-header" class="menu menu-header" role="navigation" aria-label="Header Menu Menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement"><div class="menu-short-menu-container"><div class="responsive-menu-icon"></div><ul id="menu-short-menu" class="menu nav-menu responsive-menu"><li id="menu-item-1299" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-1299"><a href="http://src.wordpress-develop.dev/">Home</a></li>
+<li id="menu-item-1300" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1300"><a href="http://src.wordpress-develop.dev/about">About</a></li>
+<li id="menu-item-1302" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1302"><a href="http://src.wordpress-develop.dev/parent-page">Parent Page</a>
+<ul class="sub-menu">
+  <li id="menu-item-1303" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1303"><a href="http://src.wordpress-develop.dev/parent-page/child-page-01">Child Page 01</a></li>
+  <li id="menu-item-1304" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1304"><a href="http://src.wordpress-develop.dev/parent-page/child-page-02">Child Page 02</a></li>
+  <li id="menu-item-1305" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1305"><a href="http://src.wordpress-develop.dev/parent-page/child-page-03">Child Page 03</a>
+  <ul class="sub-menu">
+    <li id="menu-item-1306" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1306"><a href="http://src.wordpress-develop.dev/parent-page/child-page-03/grandchild-page">Grandchild Page</a></li>
+  </ul>
+</li>
+  <li id="menu-item-1307" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1307"><a href="http://src.wordpress-develop.dev/parent-page/child-page-04">Child Page 04</a></li>
+  <li id="menu-item-1308" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1308"><a href="http://src.wordpress-develop.dev/parent-page/child-page-05">Child Page 05</a></li>
+</ul>
+</li>
+<li id="menu-item-1301" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1301"><a href="http://src.wordpress-develop.dev/blog">Blog</a></li>
+</ul></div></nav>
+  </div>
+</body>
+</html>
