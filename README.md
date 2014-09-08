@@ -6,23 +6,24 @@ Improves menu accessibility in two ways:
  * Adds a delay to submenus disappearing when moving the mouse away.
  * Makes submenus appear when tabbing through menu items with the keyboard.
 
-Kudos to Rian Rietveld for the code on which this plugin is based. Originally written for a Genesis Framework child theme, this should work for all WordPress themes and static sites which follow a typical structure for menus and submenus.
+Kudos to Rian Rietveld for the original code concept on which this plugin is based. Originally written for a Genesis Framework child theme, this should work for all WordPress themes and static sites which follow a typical structure for menus and submenus.
 
-## Getting Started
+## Download
 
 ### Bower
-
 In your `bower.json`:
 
 `"accessible-menu": "GaryJones/accessible-menu#master`
 
 Change `#master` to `#develop` or a specific tag like `#1.0.0` if needed.
 
-### Zip
+### Standalone
 Download the [production version][min] or the [development version][max].
 
 [min]: https://raw.githubusercontent.com/GaryJones/accessible-menu/master/dist/jquery.accessible-menu.min.js
 [max]: https://raw.githubusercontent.com/GaryJones/accessible-menu/master/dist/jquery.accessible-menu.js
+
+## Install
 
 ### WordPress Theme
 If using WordPress, and not concatenating it into your main theme JavaScript file, add the following to your theme functions.php:
@@ -44,13 +45,21 @@ function prefix_enqueue_scripts() {
 
 That assumes the minified and non-minified scripts will end up in `wp-content/yourtheme/js/`.
 
-Now in your main theme JavaScript file, add one of the Example lines from below.
+Now in your main theme JavaScript file, add:
+
+~~~js
+jQuery(function($) {
+  $( document ).gamajoAccessibleMenu();
+});
+~~~
+
+Or choose a variant like the Example section below.
 
 ### Static
 
-In your web page:
+In your web page (example):
 
-```html
+~~~html
 <script src="jquery.js"></script>
 <script src="dist/jquery.accessible-menu.min.js"></script>
 <script>
@@ -58,25 +67,9 @@ jQuery(function($) {
   $( document ).gamajoAccessibleMenu();
 });
 </script>
-```
+~~~
 
-## Documentation
-
-Here are the options:
-
-### hoverClass
-_Default:_ `'menu-item-hover'`
-The CSS class to add to indicate item is hovered or focused.
-
-### hoverDelay
-_Default:_ `250`
-The delay in milliseconds to keep submenus showing after mouse leaves.
-
-### menuItemSelector
-_Default:_ `'.menu-item'`
-Selector for general menu items. If you remove the default menu item classes, then you may want to call this plugin with this value set to something like 'nav li' or '.menu li'.
-
-## Examples
+## Usage
 After enqueueing this file (or concatenating it with your theme JS file), call it with:
 
 ~~~js
@@ -98,6 +91,20 @@ jQuery( document ).gamajoAccessibleMenu({
     menuItemSelector: '.menu-item'
 });
 ~~~
+
+## Options
+
+### hoverClass
+_Default:_ `'menu-item-hover'`
+The CSS class to add to indicate item is hovered or focused.
+
+### hoverDelay
+_Default:_ `250`
+The delay in milliseconds to keep submenus showing after mouse leaves.
+
+### menuItemSelector
+_Default:_ `'.menu-item'`
+Selector for general menu items. If you remove the default menu item classes, then you may want to call this plugin with this value set to something like 'nav li' or '.menu li'.
 
 ## Release History
 
