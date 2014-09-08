@@ -95,15 +95,15 @@ jQuery( document ).gamajoAccessibleMenu({
 ## Options
 
 ### hoverClass
-_Default:_ `'menu-item-hover'`
+_Default:_ `'menu-item-hover'`  
 The CSS class to add to indicate item is hovered or focused.
 
 ### hoverDelay
-_Default:_ `250`
+_Default:_ `250`  
 The delay in milliseconds to keep submenus showing after mouse leaves.
 
 ### menuItemSelector
-_Default:_ `'.menu-item'`
+_Default:_ `'.menu-item'`  
 Selector for general menu items. If you remove the default menu item classes, then you may want to call this plugin with this value set to something like 'nav li' or '.menu li'.
 
 ## Release History
