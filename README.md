@@ -1,4 +1,4 @@
-# Gamajo Accessible Menu
+# Gamajo Accessible Menu [![Build Status](http://img.shields.io/travis/GaryJones/accessible-menu/develop.svg)(https://travis-ci.org/GaryJones/accessible-menu)]
 
 Making WordPress navigation menus a little more accessible.
 
