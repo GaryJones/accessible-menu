@@ -1,4 +1,5 @@
-# Gamajo Accessible Menu [![Build Status](http://img.shields.io/travis/GaryJones/accessible-menu/develop.svg)](https://travis-ci.org/GaryJones/accessible-menu)
+# Gamajo Accessible Menu 
+[![Build Status](http://img.shields.io/travis/GaryJones/accessible-menu/develop.svg)](https://travis-ci.org/GaryJones/accessible-menu)
 
 Making WordPress navigation menus a little more accessible.
 
@@ -13,7 +14,7 @@ Kudos to Rian Rietveld for the original code concept on which this plugin is bas
 ### Bower
 In your `bower.json`:
 
-`"accessible-menu": "GaryJones/accessible-menu#master`
+`"accessible-menu": "GaryJones/accessible-menu#master"`
 
 Change `#master` to `#develop` or a specific tag like `#1.0.0` if needed.
 
